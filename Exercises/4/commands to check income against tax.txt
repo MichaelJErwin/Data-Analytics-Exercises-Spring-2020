@@ -1,0 +1,6 @@
+Description: if tax is not null and income is null then calculate the income based on tax (i.e., income = tax * 0.15)
+R script:
+cr<-correctionRules(expression(if (!is.na(tax) & is.na(income)) income <- (tax / 0.15)))
+cor<-correctWithRules(cr,data)
+new_data <- cor$corrected
+#I hope it helps

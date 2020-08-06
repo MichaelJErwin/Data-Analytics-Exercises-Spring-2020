@@ -1,0 +1,4 @@
+install.packages('scatterplot3d')
+library(scatterplot3d)
+attach(data)
+help(scatterplot3d)
